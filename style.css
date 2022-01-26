@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+
+@font-face {
+    font-family: zeBrazil;
+    src: url(fonts/ZEBRAZIL\ _\ Zarni.ttf);
+  }
+
+:root {
+    --colorOne:#91C499;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+}
+
+/* multiple elements w the same proprety */
+
+/* margim-bottom:40px */
+.header, .timeline , #galery , #quote-container {
+    margin-bottom: 40px;
+}
+
+body {
+    background: #fff;
+}
+
+#main {
+    padding: 40px;
+}
+
+.header {
+    height:100vh;
+    display: grid;
+    grid-template-areas:
+    "header-1 header-2"
+    "header-1 header-2"
+    "header-1 header-2";
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-1 {
+    grid-area: header-1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-1-title {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-name: landing-title;;
+    animation-duration:1s;
+
+}
+
+@keyframes landing-title {
+    0% {top: -200px;}
+    25% {top: -150px;}
+    50% {top: -100px;}
+    75% {top: -50px;}
+    100% {top: 0px;}
+}
+
+.header-1 > .header-1-title > h1 {
+    font-family: zeBrazil;
+    font-size: 70px;
+}
+
+.header-1-p {
+    padding: 20px;
+    text-align: justify;
+}
+
+.header-1-p::first-letter {
+    margin-left: 40px;
+    font-size: 25px;
+}
+
+.header-1-p::first-line {
+    background-color:var(--colorOne);
+}
+
+.btn-box {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+a , h2 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+ a {
+    text-decoration: none;
+    margin:10px;
+    text-align: center;
+    background-color:#000;
+    color: #fff;
+    padding: 5px;
+}
+
+.header {
+    animation-name: landing-page;
+    animation-duration: 1s;
+}
+
+@keyframes landing-page {
+    0% {opacity:0}
+    10% {opacity:0.1}
+    20% {opacity:0.2}
+    30% {opacity:0.3}
+    40% {opacity:0.4}
+    50% {opacity:0.5}
+    60% {opacity:0.6}
+    70% {opacity:0.7}
+    80% {opacity:0.8}
+    90% {opacity:0.9}
+    100% {opacity:1;}
+
+}
+
+.btn-box > a:hover {
+    background-color: var(--colorOne);
+}
+
+.header-2 {
+    grid-area: header-2;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+figcaption {
+    padding:5px;
+}
+
+#img-div {
+    position: relative;
+    animation-name: img-animation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes img-animation {
+    0% {right: -100px;}
+    25% {right: -75px;}
+    50% {right: -50px;}
+    75% {right: -25px;}
+    100% {right: 0px;}
+}
+
+img {
+    max-width:100%;
+    align-self: center;
+    display:block;
+}
+
+
+.timeline {
+    padding: 40px;
+    height:100vh;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.timeline > ul {
+    margin-top: 40px;
+}
+
+.timeline > ul > li {
+    list-style: none;
+    display: grid;
+    grid-template-areas:
+    "year content";
+    grid-template-columns: 1fr 2fr;
+}
+
+
+
+li > h3 {
+    grid-area: year;
+    align-self: center;
+    justify-self: center;
+    background-color:var(--colorOne);
+    color: white;
+    padding: 4px 10px;
+}
+
+li > p {
+    grid-area: content;
+    margin: 10px;
+    text-align:justify;
+}
+
+#galery {
+    height:auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    row-gap: 40px;
+}
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+#quote-container {
+    height:100vh;
+    display: grid;
+}
+
+#quote-container > h2 {
+    align-self: end;
+}
+#quote-container > .quote {
+    align-self: center;
+    justify-self: center;
+    padding: 150px;
+    background-image: url(https://i1.wp.com/macaetips.com/wp-content/uploads/2016/11/cassia-eller.jpg?fit=768%2C398);
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.quote > q {
+    background:#fff;
+    color: #000;
+}
+
+.quote > .btn-box {
+    margin-top: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.quote > .btn-box > a {
+    background-color: #fff;
+    color: #000;
+}
+
+.quote > .btn-box > a:hover {
+    background-color: var(--colorOne);
+    color:#fff;
+}
+
+
+footer {
+    text-align: center;
+    padding:30px;
+}
+
+footer:hover, .quote:hover, img:hover {
+    opacity: 0.8;
+}
+
+
+
+
+@media (max-width:800px) {
+    .header {
+      grid-template-areas:
+      "header-1 header-1"
+      "header-1 header-1"
+      "header-2 header-2"
+      "header-2 header-2";
+    }
+}
+
+@media (max-width:680px) {
+    * {
+        font-size: 16px;
+    }
+    #main {
+        padding:0;
+    }
+
+    .header-1 > .header-1-title > h1 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header {
+        height: auto;
+    }
+
+    .timeline {
+        padding: 5px;
+        height: auto;
+    }
+  
+  .galary {
+    height:auto;
+  }
+
+    #quote-container > .quote {
+        padding:20px;
+    }
+
+
+    
+}
+
